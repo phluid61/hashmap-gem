@@ -4,6 +4,8 @@ hashmap
 https://bugs.ruby-lang.org/issues/7793
 
 ### `map_values(&block)`
+*Yields* +value+
+
 Returns a new hash which is a copy of the current hash but each value is replaced by the result of running it through +block+.
 
 ```ruby
@@ -12,6 +14,8 @@ Returns a new hash which is a copy of the current hash but each value is replace
 ```
 
 ### `map_keys(&block)`
+*Yields* +key+
+
 Returns a new hash which is a copy of the current hash but each key is replaced by the result of running it through +block+.
 
 If +block+ returns duplicate keys, they will be overwritten in the resulting hash.
@@ -22,6 +26,8 @@ If +block+ returns duplicate keys, they will be overwritten in the resulting has
 ```
 
 ### `map_pairs(&block)`
+*Yields* +key+, +value+
+
 Returns a new hash which is a copy of the current hash but each key-value pair is replaced by the result of running it through +block+.
 
 If +block+ returns duplicate keys, they will be overwritten in the resulting hash.

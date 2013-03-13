@@ -9,3 +9,5 @@ rvm:
   - jruby-head
   - rbx-19mode
   - rbx-18mode
+before_install:
+  - gem install bundler

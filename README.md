@@ -2,6 +2,7 @@ hashmap
 =======
 
 https://bugs.ruby-lang.org/issues/7793
+[![Build Status](https://travis-ci.org/[phluid61]/[hashmap-gem].png)](https://travis-ci.org/[phluid61]/[hashmap-gem])
 
 ### `map_values(&block)`
 **Yields**: *value*

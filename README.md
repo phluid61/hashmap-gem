@@ -2,7 +2,6 @@ hashmap
 =======
 
 https://bugs.ruby-lang.org/issues/7793
-[![Build Status](https://travis-ci.org/phluid61/hashmap-gem.png)](https://travis-ci.org/phluid61/hashmap-gem)
 
 ### `map_values(&block)`
 **Yields**: *value*
@@ -37,3 +36,7 @@ If *block* returns duplicate keys, they will be overwritten in the resulting has
 {'a'=>1, 'b'=>2}.map_pairs { |k,v| [k*2, v+1] } #=> {'aa'=>2, 'bb'=>3}
 {'a'=>1, 'b'=>2}.map_pairs { ["cat","dog"] }   #=> {'cat'=>'dog'}
 ```
+
+----
+
+[![Build Status](https://travis-ci.org/phluid61/hashmap-gem.png)](https://travis-ci.org/phluid61/hashmap-gem)

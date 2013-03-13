@@ -7,5 +7,5 @@ group :development do
 end
 
 group :test do
-	get 'rake'
+	gem 'rake'
 end

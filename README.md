@@ -39,4 +39,5 @@ If *block* returns duplicate keys, they will be overwritten in the resulting has
 
 ----
 
-[![Build Status](https://travis-ci.org/phluid61/hashmap-gem.png)](https://travis-ci.org/phluid61/hashmap-gem)
+* [Contributor Code of Conduct](code_of_conduct.md)
+* [![Build Status](https://travis-ci.org/phluid61/hashmap-gem.png)](https://travis-ci.org/phluid61/hashmap-gem)

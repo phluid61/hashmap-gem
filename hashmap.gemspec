@@ -8,5 +8,5 @@ Gem::Specification.new do |s|
   s.email   = 'matthew@kerwin.net.au'
   s.files   = ['lib/hashmap.rb']
   s.homepage = 'http://rubygems.org/gems/hashmap'
-  s.license = 'ISC License'
+  s.license = 'ISC'
 end

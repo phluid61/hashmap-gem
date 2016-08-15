@@ -13,6 +13,8 @@ Returns a new hash which is a copy of the current hash but each value is replace
 {'a'=>1, 'b'=>2}.map_values { "cat" }   #=> {'a'=>"cat", 'b'=>"cat"}
 ```
 
+If no block is given, an Enumerator is returned instead.
+
 ### `map_keys(&block)`
 **Yields**: *key*
 
@@ -25,6 +27,8 @@ If *block* returns duplicate keys, they will be overwritten in the resulting has
 {'a'=>1, 'b'=>2}.map_keys { "cat" }   #=> {'cat'=>2}
 ```
 
+If no block is given, an Enumerator is returned instead.
+
 ### `map_pairs(&block)`
 **Yields**: *key*, *value*
 
@@ -36,6 +40,8 @@ If *block* returns duplicate keys, they will be overwritten in the resulting has
 {'a'=>1, 'b'=>2}.map_pairs { |k,v| [k*2, v+1] } #=> {'aa'=>2, 'bb'=>3}
 {'a'=>1, 'b'=>2}.map_pairs { ["cat","dog"] }   #=> {'cat'=>'dog'}
 ```
+
+If no block is given, an Enumerator is returned instead.
 
 ----
 

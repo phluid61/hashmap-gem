@@ -7,7 +7,10 @@ class Hash
   #   {'a'=>1, 'b'=>2}.map_values { |v| v*2 } #=> {'a'=>2, 'b'=>4}
   #   {'a'=>1, 'b'=>2}.map_values { "cat" }   #=> {'a'=>"cat", 'b'=>"cat"}
   #
+  # If no block is given, an Enumerator is returned instead.
+  #
   def map_values &block # :yields: value
+    return enum_for(:map_values) unless block_given?
     hsh = {}
     each do |k, v|
       hsh[k] = yield v
@@ -21,6 +24,7 @@ class Hash
   # See: #map_values
   #
   def map_values! &block # :yields: value
+    return enum_for(:map_values!) unless block_given?
     replace map_values(&block)
   end
 
@@ -34,7 +38,10 @@ class Hash
   #   {'a'=>1, 'b'=>2}.map_keys { |k| k*2 } #=> {'aa'=>1, 'bb'=>2}
   #   {'a'=>1, 'b'=>2}.map_keys { "cat" }   #=> {'cat'=>2}
   #
+  # If no block is given, an Enumerator is returned instead.
+  #
   def map_keys &block # :yields: key
+    return enum_for(:map_keys) unless block_given?
     hsh = {}
     each do |k, v|
       hsh[ yield k ] = v
@@ -50,6 +57,7 @@ class Hash
   # See: #map_keys
   #
   def map_keys! &block # :yields: key
+    return enum_for(:map_keys!) unless block_given?
     replace map_keys(&block)
   end
 
@@ -63,7 +71,10 @@ class Hash
   #   {'a'=>1, 'b'=>2}.map_pairs { |k,v| [k*2, v+1] } #=> {'aa'=>2, 'bb'=>3}
   #   {'a'=>1, 'b'=>2}.map_pairs { ["cat","dog"] }   #=> {'cat'=>'dog'}
   #
+  # If no block is given, an Enumerator is returned instead.
+  #
   def map_pairs &block # :yields: key, value
+    return enum_for(:map_pairs) unless block_given?
     hsh = {}
     each do |k, v|
       a, b = yield k, v
@@ -75,9 +86,10 @@ class Hash
   #
   # Replaces the values in +hsh+ by running them each through +block+.
   #
-  # See: #map_values
+  # See: #map_pairs
   #
   def map_pairs! &block # :yields: key, value
+    return enum_for(:map_pairs!) unless block_given?
     replace map_pairs(&block)
   end
 end

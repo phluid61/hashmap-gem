@@ -1,0 +1,48 @@
+---
+layout: default
+title: "hashmap"
+---
+<h1>hashmap</h1>
+<p>https://bugs.ruby-lang.org/issues/7793</p>
+<h3><code>map_values(&amp;block)</code></h3>
+<p><strong>Yields</strong>: <em>value</em></p>
+<p>Returns a new hash which is a copy of the current hash but each value is replaced by the result of running it through <em>block</em>.</p>
+<pre><code class="language-ruby">{'a'=&gt;1, 'b'=&gt;2}.map_values { |v| v*2 } #=&gt; {'a'=&gt;2, 'b'=&gt;4}
+{'a'=&gt;1, 'b'=&gt;2}.map_values { &quot;cat&quot; }   #=&gt; {'a'=&gt;&quot;cat&quot;, 'b'=&gt;&quot;cat&quot;}
+</code></pre>
+<p>If no block is given, an Enumerator is returned instead.</p>
+<h3><code>map_keys(&amp;block)</code></h3>
+<p><strong>Yields</strong>: <em>key</em></p>
+<p>Returns a new hash which is a copy of the current hash but each key is replaced by the result of running it through <em>block</em>.</p>
+<p>If <em>block</em> returns duplicate keys, they will be overwritten in the resulting hash.</p>
+<pre><code class="language-ruby">{'a'=&gt;1, 'b'=&gt;2}.map_keys { |k| k*2 } #=&gt; {'aa'=&gt;1, 'bb'=&gt;2}
+{'a'=&gt;1, 'b'=&gt;2}.map_keys { &quot;cat&quot; }   #=&gt; {'cat'=&gt;2}
+</code></pre>
+<p>If no block is given, an Enumerator is returned instead.</p>
+<h3><code>map_pairs(&amp;block)</code></h3>
+<p><strong>Yields</strong>: <em>key</em>, <em>value</em></p>
+<p>Returns a new hash which is a copy of the current hash but each key-value pair is replaced by the result of running it through <em>block</em>.</p>
+<p>If <em>block</em> returns duplicate keys, they will be overwritten in the resulting hash.</p>
+<pre><code class="language-ruby">{'a'=&gt;1, 'b'=&gt;2}.map_pairs { |k,v| [k*2, v+1] } #=&gt; {'aa'=&gt;2, 'bb'=&gt;3}
+{'a'=&gt;1, 'b'=&gt;2}.map_pairs { [&quot;cat&quot;,&quot;dog&quot;] }   #=&gt; {'cat'=&gt;'dog'}
+</code></pre>
+<p>If no block is given, an Enumerator is returned instead.</p>
+<hr />
+<ul>
+<li><a href="code_of_conduct.html">Contributor Code of Conduct</a></li>
+<li><a href="https://travis-ci.org/phluid61/hashmap-gem"><img src="https://travis-ci.org/phluid61/hashmap-gem.png" alt="Build Status" /></a></li>
+</ul>
+<pre id="license" class="no-highlight">Copyright (c) 2013-2016, Matthew Kerwin &lt;matthew@kerwin.net.au&gt;
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+</pre>

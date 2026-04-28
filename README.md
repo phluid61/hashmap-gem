@@ -46,7 +46,17 @@ If *block* returns duplicate keys, they will be overwritten in the resulting has
 
 If no block is given, an Enumerator is returned instead.
 
-----
+## Contributor Code of Conduct
 
-* [Contributor Code of Conduct](code_of_conduct.md)
-* [![Build Status](https://travis-ci.org/phluid61/hashmap-gem.png)](https://travis-ci.org/phluid61/hashmap-gem)
+This repository is subject to a [Contributor Code of Conduct](code_of_conduct.md)
+adapted from the [Contributor Covenant][cc], version 3.0, available at
+<https://www.contributor-covenant.org/version/3/0/>
+
+
+[cc]: https://www.contributor-covenant.org
+
+
+## Licence
+
+This project is licensed under the ISC licence. See [LICENSE](LICENSE)
+for details

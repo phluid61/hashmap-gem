@@ -1,6 +1,9 @@
 hashmap
 =======
 
+[![Gem Version](https://badge.fury.io/rb/hashmap.png)](http://badge.fury.io/rb/hashmap)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v3.0%20adopted-ff69b4.svg)](code_of_conduct.md)
+
 https://bugs.ruby-lang.org/issues/7793
 
 ### `map_values(&block)`
